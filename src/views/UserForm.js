@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 
-export default UserForm = (props) => {
+export default UserForm = ({ route, navigation}) => {
+    const [ user, setUser ] = useState( route.params? route.params : {})
     return (
         <View>
-            <Text>UserForm</Text>
+            <Text>{user.name}</Text>
         </View>
 )};
